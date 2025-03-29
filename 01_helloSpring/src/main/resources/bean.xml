@@ -16,12 +16,16 @@
     </bean>
     
     <bean id="toyotaEngine" class="model.ToyotaEngine"></bean>
-    <bean id="kiaEngine" class="model.KiaEngine" primary="true"></bean>
-	
-	<bean id="kia" class="model.Kia">
+    
+    <bean id="kia" class="model.Kia">
 	    <constructor-arg value="1000000"></constructor-arg>
-	    <constructor-arg ref="kiaEngine"></constructor-arg>
-	</bean>
-	<bean id="engine" class="model.ToyotaEngine"></bean>
-	<bean id="tesla" class="model.Tesla" autowire="byType"></bean>
+	    <constructor-arg ref="toyotaEngine"></constructor-arg>
+    </bean>
+    
+    <bean id="tesla" class="model.Tesla" autowire="byName"></bean>
+    
+    <bean id="engine" class="model.ToyotaEngine"></bean>
+    
+    <bean id="kiaEngine" class="model.KiaEngine" primary="true"></bean>
+
 </beans>

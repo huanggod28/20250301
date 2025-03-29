@@ -1,10 +1,8 @@
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import config.CarConfig;
-import model.Kia;
-import model.Tesla;
+import model.Benz;
 
 public class AnnotationMain {
 
@@ -16,14 +14,17 @@ public class AnnotationMain {
 			System.out.println(name);
 		}
 		
-		Kia kia = ctx.getBean(Kia.class);
-		System.out.println(kia);
-		kia.move();
+//		Kia kia = ctx.getBean(Kia.class);
+//		System.out.println(kia);
+//		kia.move();
+//		
+//		Tesla tesla = (Tesla)ctx.getBean("bmw");
+//		System.out.println(tesla);
+//		tesla.move();
 		
-		Tesla tesla = (Tesla)ctx.getBean("bmw");
-		System.out.println(tesla);
-		tesla.move();
-		
+		Benz benz = (Benz)ctx.getBean("benz");
+		System.out.println(benz);
+		benz.move();
 	}
 
 }

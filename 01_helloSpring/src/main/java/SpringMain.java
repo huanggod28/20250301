@@ -2,6 +2,7 @@
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import model.Benz;
 import model.Kia;
 import model.Tesla;
 import model.Toyota;
@@ -27,6 +28,8 @@ public class SpringMain {
 		Tesla tesla = ctx.getBean(Tesla.class);
 		System.out.println(tesla);
 		tesla.move();
+		
+		
 	}
 
 }
