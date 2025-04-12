@@ -7,5 +7,28 @@
 <body>
 <h1>新增代辦事項</h1>
 
+<!-- 顯示抓到todo -->
+<p th:text="${todo}">XXX</p>
+<form th:action="@{/todo}" th:object="${todo}" action="/" method="POST">
+    <div>
+        <label for="title">標題:</label>
+        <input type="text" id="title" th:field="*{title}" />
+        <span class="error"></span>
+    </div>
+    <div>
+        <label for="dueDate">到期日:</label>
+        <input type="date" id="dueDate" th:field="*{dueDate}"/>
+        <span class="error"></span>
+    </div>
+    
+    <div>
+        <label for="memo">備註:</label>
+        <input type="text" id="memo" th:field="*{memo}" />
+    </div>
+    <div>
+        <button type="submit">新增待辦事項</button>
+    </div>
+</form>
+<div th:replace="~{common :: footer2}"></div>
 </body>
 </html>

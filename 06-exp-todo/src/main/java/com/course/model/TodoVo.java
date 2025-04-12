@@ -1,51 +1,82 @@
 package com.course.model;
 
-import java.util.Date;
-
 public class TodoVo {
+
+	/** 鍵值 */
 	private Long id;
+	
+	/** 標題 */
 	private String title;
-	private Date dueDate;
-	private Integer status;
+	
+	/** 到期日 */
+	private String dueDate;
+	
+	/** 狀態 */
+	private String status;
+	
+	/** 狀態呈現 */
+	private String statusDisp;
+	
+	/** 備註 */
 	private String memo;
-	private Long userId;
 	
-	
+	/** 使用者名稱 */
+	private String username;
+
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public Date getDueDate() {
+
+	public String getDueDate() {
 		return dueDate;
 	}
-	public void setDueDate(Date dueDate) {
+
+	public void setDueDate(String dueDate) {
 		this.dueDate = dueDate;
 	}
-	public Integer getStatus() {
+
+	public String getStatus() {
 		return status;
 	}
-	public void setStatus(Integer status) {
+
+	public void setStatus(String status) {
 		this.status = status;
 	}
+
+	public String getStatusDisp() {
+		return statusDisp;
+	}
+
+	public void setStatusDisp(String statusDisp) {
+		this.statusDisp = statusDisp;
+	}
+
 	public String getMemo() {
 		return memo;
 	}
+
 	public void setMemo(String memo) {
 		this.memo = memo;
 	}
-	public Long getUserId() {
-		return userId;
+
+	public String getUsername() {
+		return username;
 	}
-	public void setUserId(Long userId) {
-		this.userId = userId;
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	
 	
