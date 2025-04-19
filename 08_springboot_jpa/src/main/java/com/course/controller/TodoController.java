@@ -103,4 +103,16 @@ public class TodoController {
 	public List<TodoEntity> findByCondition(String title, Integer status) {
 		return todoService.findByCondition(title, status);
 	}
+	
+	@Operation(summary = "更新待辦事項Title", tags = "@Query")
+	@PostMapping("/update/todo")
+	public Integer updateQuery(Long id, String title) {
+		return todoService.updateQuery(id, title);
+	}
+	
+	@Operation(summary = "刪除待辦事項Title", tags = "@Query")
+	@PostMapping("/delete/todo")
+	public Integer deleteQuery(Long id) {
+		return todoService.deleteQuery(id);
+	}
 }
